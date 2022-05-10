@@ -31,7 +31,6 @@ from django.core.validators import MaxValueValidator, MinValueValidator,FileExte
 # Create your views here.
 @login_required
 def home(request):
-
     return render(request,"home.html")
 
 
@@ -106,7 +105,7 @@ def login(request):
            auth_login(request, user)
            return redirect('/')
        if user is None:
-           return redirect('profilecreate')
+           return redirect('/')
 
        else:
            messages.info(request, 'Username or password are not correct')
@@ -139,14 +138,14 @@ def addintrest(request):
     return render(request, 'intrestpage.html')
 
 
-class profilecreate(CreateView):
-    template_name = 'profile.html'
-    success_url = '/'
-    form_class = userprofiles
+# class profilecreate(CreateView):
+#     template_name = 'profile.html'
+#     success_url = '/'
+#     form_class = userprofiles
     
-    def form_valid(self, form):
-        user = self.request.user
-        user.save()
-        form.instance.user= user
-        return super().form_valid(form)
+#     def form_valid(self, form):
+#         user = self.request.user
+#         user.save()
+#         form.instance.user= user
+#         return super().form_valid(form)
     
