@@ -19,7 +19,7 @@ with email Verification activation link
 by these details we make cibil score between 500 and 700
 3) User can add loan request According their [maximum loan limit]
 4) Users can [search,sort,filter] on Search loan request page.
-5) If User like the request They can Accept the request and we send mail to user who added that request, that your accepted.
+5) If User like the request They can Accept the request and we send mail to user who added that request, we say that your request is accepted.
 
 
 
